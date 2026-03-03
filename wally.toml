@@ -1,0 +1,16 @@
+[package]
+name = "danieluntask/network"
+description = "under testing" 
+version = "0.0.3"
+license = "MIT"
+authors = ["DanielUnTask"]
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+exclude = ["**"]
+include = ["src", "src/*", "default.project.json", "wally.lock", "wally.toml", "LICENSE"]
+
+[dependencies]
+Task = "danieluntask/task@0.1.1"
+Trove = "sleitnick/trove@1.8.0"
+Signal = "danieluntask/signal@0.1.7"
