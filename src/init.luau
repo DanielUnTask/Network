@@ -5,7 +5,7 @@ local RunService = game:GetService("RunService")
 
 --- Dependencies
 local Types = require(script.types)
-local Remote = require(script.Classes.Remote)
+local Remote = require(script.classes.Remote)
 local external = require(script.external)
 
 --- Variables
