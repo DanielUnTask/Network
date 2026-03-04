@@ -19,7 +19,7 @@ export type ClientResponse<A... = (), B... = ()> = Types.ClientResponse<A..., B.
 export type NetworkRemoteClient = Types.NetworkRemoteClient
 export type NetworkRemoteServer = Types.NetworkRemoteServer
 export type ClientChannel<A... = (), B... = ()> = Types.ClientChannel<A..., B...>
-export type AttributeServer<A... = (), B... = ()> = Types.ServerChannel<A..., B...>
+export type ServerChannel<A... = (), B... = ()> = Types.ServerChannel<A..., B...>
 
 export type NetworkSignal<A... = ()> = Types.NetworkSignal<A...>
 export type NetworkConnection<A... = ()> = Types.NetworkConnection<A...>
