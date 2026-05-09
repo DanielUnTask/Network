@@ -103,7 +103,7 @@ function RemoteClient._setup<A..., B...>(self: PrivateRemote<A..., B...>)
 		if self._cache[channel.GUID] then
 			self._cache[channel.GUID] = nil
 		end
-		local index = self._event:GetAttribute(channel.Name)
+		local index = self._event:GetAttribute(channel.Name) :: number?
 		if not index then
 			channel._removing = true
 			self._trove:Remove(channel)

@@ -3,7 +3,16 @@ Network is an advanced abstraction on top of RemoteEvent that allows you to crea
 
 Instead of creating multiple RemoteEvents, Network generates a single RemoteEvent that manages multiple channels identified by a GUID. Each channel is registered as an attribute of the remote, allowing the client to automatically discover and synchronize available channels.
 
-[Wally Package](https://wally.run/package/danieluntask/network?version=0.0.6)
+# ⚠️ Critical Update — v0.0.7
+
+A critical issue was fixed in version `0.0.7` where data sent from the client to the server was not being received correctly.
+
+This affected client-to-server communication through channels using `:FireServer()`.
+
+The issue has now been fully resolved in `v0.0.7`.
+If you are using an older version, updating is strongly recommended.
+
+[Wally Package](https://wally.run/package/danieluntask/network?version=0.0.7)
 
 ## Remote Example
 A channel behaves like a normal RemoteEvent, but it lives inside a single managed remote.

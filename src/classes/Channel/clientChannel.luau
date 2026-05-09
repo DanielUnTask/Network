@@ -50,7 +50,7 @@ function ClientChannel.new<A..., B...>(
 	self._trove = (Trove.new() :: any) :: typeof(Trove.new())
 
 	self.Name = channelName
-	self.GUID = networkRemote._event:GetAttribute(channelName)
+	self.GUID = networkRemote._event:GetAttribute(channelName) :: any
 	self.OnClientEvent = (self._trove:Construct(Signal.new) :: any) :: Types.NetworkSignal<(A...)>
 
 	networkRemote._cache[channelName] = self
@@ -78,7 +78,7 @@ end
 function ClientChannel.FireServer<A..., B...>(self: PrivateChannel<A..., B...>, ...: A...): B...
 	local remote = self.Remote
 	if not self.ResponseTimeout then
-		remote._event:FireServer(...)
+		remote._event:FireServer(self.GUID, nil, ...)
 	else
 		local responseThread
 		for _ = 1, 128 do

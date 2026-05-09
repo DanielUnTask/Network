@@ -41,8 +41,8 @@ local function create(remoteName: string, customParent: Folder?)
 	end
 
 	local parent = customParent or Folder
-	local remote = RunService:IsServer() and Remote.RemoteServer(remoteName, parent) :: any
-		or Remote.RemoteClient(remoteName, parent) :: any
+	local remote = RunService:IsServer() and Remote.RemoteServer(remoteName, parent :: any) :: any
+		or Remote.RemoteClient(remoteName, parent :: any) :: any
 
 	Cache[remoteName] = remote
 	remote._trove:Add(function()

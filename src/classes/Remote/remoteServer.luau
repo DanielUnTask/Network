@@ -104,7 +104,7 @@ function RemoteServer._setup<A..., B...>(self: PrivateRemote<A..., B...>)
 		if not threadTable then
 			return
 		end
-		self._playerThreads[Players] = nil
+		self._playerThreads[player] = nil
 		for _, thread in threadTable do
 			if typeof(thread) == "number" then
 				continue
